@@ -1,0 +1,17 @@
+function PDX {
+  name = "Portland"
+}
+var pdx = { name: "Portland" };
+var sfo = { name: "San Francisco" };
+var sea = { name: "Seattle" };
+var cso = { name: "Aktau" };
+var dzn = { name: "Zhezkazgan" };
+
+var usa = { name: "United States of America", cities: [pdx, sfo, sea] };
+var kazakhstan = { name: "Kazakhstan", cities: [cso, dzn] };
+var uruguay = { name: "Uruguay", cities: [] };
+
+// usa is the name of the states (key), and the value is the arraylist of cities. You can call the value on the variable(?) which makes it the array proper.... So usa.cities is it's own phrase that grabs the cities arraylist. You can't just say cities to represent the arraylist, because it's inside usa. You then call the .forEach method on the cities arraylist. City is an unbound variable that represents the singular city (or the value for pdx (which is Portland), sfo (San Francisco), sea (Seattle)). In the console.log, we output one sentence at a time with the city.name, which .name is the key of the variable (with no value?). Let's go to Portland, let's go to San Francisco, let's go to Seattle.
+usa.cities.forEach(function(city) {
+  console.log("Let's go to " + city.name + "!");
+});

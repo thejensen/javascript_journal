@@ -1,0 +1,25 @@
+clone the package.json file from this project,
+$ npm install
+
+(Long form installation instructions below)
+$ npm init
+$ npm install gulp --save-dev
+$ npm install browserify --save-dev
+$ npm install vinyl-source-stream --save-dev
+$ npm install gulp-concat --save-dev
+$ npm install gulp-uglify --save-dev
+$ npm install gulp-util --save-dev
+$ npm install del --save-dev
+$ npm install jshint --save-dev
+$ npm install gulp-jshint --save-dev
+
+$ npm install bower -g
+$ bower init
+$ bower install jquery --save
+    <script src="bower_components/jquery/dist/jquery.min.js"></script>
+$ bower install bootstrap --save
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
+    <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+$ bower install moment --save
+    <script src="bower_components/moment/min/moment.min.js"></script>
+$ npm install bower-files --save-dev
