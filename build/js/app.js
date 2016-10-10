@@ -3,6 +3,16 @@ function Journal(entry) {
   this.entry = entry;
 }
 
+Journal.prototype.countWords = function(str) {
+  var count = 0;
+  for (var i=0; i < str.length; i++) {
+    if (str.charAt(i) == " "){
+      count ++;
+    }
+  }
+  return count + 1;
+}
+
 exports.journalModule = Journal;
 
 },{}],2:[function(require,module,exports){
@@ -13,9 +23,8 @@ $(document).ready(function() {
     event.preventDefault();
     var entryInput = $('#entry-input').val();
     var journalEntry = new Journal(entryInput);
-    Journal.forEach(function(oneJournalEntryOfManyInTheClass) {
-      $('#entry-output').append("<p>" + oneJournalEntryOfManyInTheClass + "</p>");
-    });
+    var wordCountOutput = journalEntry.countWords(entryInput);
+    $('#entry-output').append("<p>" + journalEntry.entry + ":" + wordCountOutput + " words counted." + "</p>");
   });
 });
 

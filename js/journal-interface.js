@@ -5,8 +5,8 @@ $(document).ready(function() {
     event.preventDefault();
     var entryInput = $('#entry-input').val();
     var journalEntry = new Journal(entryInput);
-    Journal.forEach(function(oneJournalEntryOfManyInTheClass) {
-      $('#entry-output').append("<p>" + oneJournalEntryOfManyInTheClass + "</p>");
-    });
+    var wordCountOutput = journalEntry.countWords(entryInput);
+    // make sure to use ids with hashes with jQuery. You can call the attribute on the object directly (see journalEntry.entry) and you don't have to loop through the object if you're just appending one thing at a time. Your custom methods should be called ON an object or the class, doesn't seem like you can use them independently?? Jury's out.
+    $('#entry-output').append("<p>" + journalEntry.entry + " :" + wordCountOutput + " words counted." + "</p>");
   });
 });
